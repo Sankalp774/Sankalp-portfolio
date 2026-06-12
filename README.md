@@ -1,40 +1,45 @@
-# My-Portfolio
-Sankalp Sahu's Portfolio website - https://sankalp774.github.io/My-Portfolio/
+# Sankalp Portfolio
 
-This repository contains a single-file, production-ready portfolio website for Sankalp Sahu, a 4th-year Computer Science Engineering (CSE) student specializing in AI and app development. The site features a cyberpunk/Matrix theme with animated code-rain background, neon accents, and responsive design. It's built as a self-contained HTML file with embedded CSS and JavaScript—no build tools or dependencies required.
-<img width="2310" height="1544" alt="image" src="https://github.com/user-attachments/assets/e31e111e-e1a5-4f3f-a27c-c294c453d66c" />
-<img width="2253" height="1388" alt="image" src="https://github.com/user-attachments/assets/423e1470-18d7-478b-adac-7e1062cf263e" />
+Personal portfolio for **Sankalp Sahu** — Junior AI/ML Engineer, Chennai.
 
-Features
+Leclerc-inspired multi-page site built with pure HTML, CSS, and JavaScript (no frameworks).
 
-Theme: Matrix-inspired code rain (using canvas for performance), neon green/cyan accents, dark mode by default.
+## Live
 
-Splash Screen: A welcoming modal with typewriter effect that fades away after 3 seconds (dismissible via click or Esc).
+GitHub Pages: [sankalp774.github.io/My-Portfolio](https://sankalp774.github.io/My-Portfolio/)
 
-Sections: Hero, About Me (with photo), Projects, Skills, Experience, Education, Blog, Contact.
+## Pages
 
-Interactivity: Smooth scrolling, modals for project/blog details, contact form (client-side validation, mailto integration), reduced motion toggle for accessibility.
+| Page | File |
+|------|------|
+| Home | `index.html` |
+| About | `about.html` |
+| Projects | `projects.html` |
+| Timeline | `timeline.html` |
+| Blog | `blog.html` |
+| Contact | `contacts.html` |
 
+## Stack
 
-Responsive: Mobile-friendly with hamburger menu on small screens.
+- HTML, CSS, vanilla JS
+- Three.js (removed from home — cinematic static build)
+- Elite interactions (`assets/dist/script/elite.js`)
+- Syne + Manrope fonts (Google Fonts)
 
-Customization: Easy to edit via constants in JS (e.g., name, projects array, colors).
+## Run locally
 
-Accessibility: Semantic HTML, keyboard navigation, alt texts, prefers-reduced-motion support.
+```bash
+python3 -m http.server 8000
+```
 
-Performance: Lazy-loaded images, no heavy assets.
+Open [http://localhost:8000](http://localhost:8000)
 
-Getting Started
-Prerequisites
+## Deploy
 
-A web browser (tested on Chrome, Firefox, Safari).
+Push to `main` — GitHub Pages serves from this repo root.
 
-Optional: GitHub account for deployment.
+## Contact
 
-Installation
-
-Clone this repository:textgit clone (https://github.com/Sankalp774/My-Portfolio)
-
-Navigate to the project directory:textcd Sankalp774/My-Portfolio
-
-Open index.html in your browser to view the site locally.
+- GitHub: [Sankalp774](https://github.com/Sankalp774)
+- LinkedIn: [sankalp-sahu-738615250](https://www.linkedin.com/in/sankalp-sahu-738615250/)
+- Email: sankalp774sahu@gmail.com
