@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta name="description" content="BankEngine — concurrent Java banking simulation with ReentrantLock and thread safety.">
+  <title>A Thousand Transactions at Once — My Java Stress Test | Sankalp Blog</title>
+  <link rel="stylesheet" href="assets/dist/style/style.css?ver=9.4">
+</head>
+<body class="page blog-post rectangle-bg--black">
+  <header class="header fixed top-0 left-0 w-full z-40" data-header>
+    <div class="site-grid h-100 lg:h-120 items-center">
+      <a href="index.html" class="header-logo hover-up">Sankalp</a>
+      <nav class="header-nav">
+        <a href="index.html" class="hover-up">Home</a>
+        <a href="about.html" class="hover-up">About</a>
+        <a href="projects.html" class="hover-up">Projects</a>
+        <a href="timeline.html" class="hover-up">Timeline</a>
+        <a href="certificates.html" class="hover-up">Certificates</a>
+        <a href="blog.html" class="hover-up active">Blog</a>
+        <a href="contacts.html" class="hover-up">Contacts</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main" style="padding-top:120px;">
+    <article class="site-grid section-py-80">
+      <div class="col-span-12 lg:col-span-8">
+        <a href="blog.html" class="text-bodyM mb-40 inline-block">← Back to Blog</a>
+        <p class="text-bodyM opacity-70 mb-16 uppercase">Timeline · January 2026</p>
+        <h1 class="text-h1 uppercase mb-40">A Thousand Transactions at Once — My Java Stress Test</h1>
+        <div class="text-bodyL" style="display:flex;flex-direction:column;gap:1.25rem;line-height:1.7;">
+          <p>BankEngine, pushed January 29, 2026, was where my concurrency coursework stopped being theoretical. The goal was ambitious for a student repo: simulate a banking engine handling 1,000+ concurrent transactions without race conditions, using Java, Executors, ConcurrentHashMap, and ReentrantLock with fairness policies. I wanted to see failure modes in daylight — duplicate transfers, inconsistent balances, threads starving each other — and then design guards that actually held. Debugging was humbling; Heisenbugs do not care about your GPA. Each fix required reading JVM behavior more carefully than any lecture slide demanded. When the engine finally sustained load without corrupting state, I felt a different kind of pride than shipping a UI feature. This was systems thinking in the raw. BankEngine also balanced my AI-heavy timeline with classical engineering credibility. Not everything I build needs a transformer. Some milestones need locks, metrics, and reproducible tests. Recruiters ask about scale — this repo is my answer at the learning scale: I understand what breaks when everyone runs at once. It reminded me why fundamentals still matter in an LLM-heavy world. Load tests do not lie, and that is why I loved this repo. It gave me vocabulary for interviews: fairness, starvation, throughput, invariants — words that feel solid when LLM hype is everywhere. BankEngine is my reminder that threads, locks, and invariants still run the world underneath every chatbot interface.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="assets/dist/script/output.js?ver=8.9"></script>
+  <script src="assets/dist/script/elite.js?ver=8.8"></script>
+</body>
+</html>

@@ -33,19 +33,46 @@
     toggle.innerHTML = '<span></span><span></span><span></span>';
     nav.parentNode.insertBefore(toggle, nav);
 
-    toggle.addEventListener('click', function() {
-      const open = nav.classList.toggle('open');
+    const headerSocial = document.querySelector('.header-social');
+    if (headerSocial && !nav.querySelector('.header-social--drawer')) {
+      const drawerSocial = headerSocial.cloneNode(true);
+      drawerSocial.classList.add('header-social--drawer');
+      drawerSocial.classList.remove('col-span-2', 'flex', 'justify-end', 'gap-28', 'items-center');
+      nav.appendChild(drawerSocial);
+    } else if (!nav.querySelector('.header-social--drawer')) {
+      const drawerSocial = document.createElement('div');
+      drawerSocial.className = 'header-social header-social--drawer';
+      drawerSocial.innerHTML =
+        '<a href="https://github.com/Sankalp774" class="hover-up" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/static/icons/github.svg" alt="GitHub" width="22" height="22"></a>' +
+        '<a href="https://www.linkedin.com/in/sankalp-sahu-738615250" class="hover-up" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/static/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"></a>' +
+        '<a href="https://x.com/Sankalp0704" class="hover-up" target="_blank" rel="noopener" aria-label="X"><img src="assets/static/icons/twitter.svg" alt="X" width="22" height="22"></a>';
+      nav.appendChild(drawerSocial);
+    }
+
+    function setNavOpen(open) {
+      nav.classList.toggle('open', open);
       toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', open);
+    }
+
+    toggle.addEventListener('click', function() {
+      setNavOpen(!nav.classList.contains('open'));
     });
 
     nav.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
-        nav.classList.remove('open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+        setNavOpen(false);
       });
     });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') setNavOpen(false);
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 767) setNavOpen(false);
+    }, { passive: true });
   }
 
   // ============================================
@@ -257,6 +284,81 @@
   const gridOverlay = document.getElementById('grid-overlay');
   if (gridOverlay && window.location.hash === '#debug') {
     gridOverlay.style.display = 'block';
+  }
+
+  // ============================================
+  // Site-wide "Next page" — bottom right at page end
+  // ============================================
+  const NEXT_PAGES = {
+    'index.html': { href: 'about.html', name: 'About' },
+    'about.html': { href: 'projects.html', name: 'Projects' },
+    'projects.html': { href: 'timeline.html', name: 'Timeline' },
+    'timeline.html': { href: 'certificates.html', name: 'Certificates' },
+    'certificates.html': { href: 'blog.html', name: 'Blog' },
+    'blog.html': { href: 'contacts.html', name: 'Contacts' },
+    'contacts.html': { href: 'index.html', name: 'Home' },
+    'blog-post-1.html': { href: 'blog-post-2.html', name: 'Next article' },
+    'blog-post-2.html': { href: 'blog-post-3.html', name: 'Next article' },
+    'blog-post-3.html': { href: 'blog-post-4.html', name: 'Next article' },
+    'blog-post-4.html': { href: 'blog-post-5.html', name: 'Next article' },
+    'blog-post-5.html': { href: 'contacts.html', name: 'Contacts' }
+  };
+
+  function currentPageFile() {
+    const file = window.location.pathname.split('/').pop();
+    return !file || file === '' ? 'index.html' : file;
+  }
+
+  const pageFile = currentPageFile();
+  const nextTarget = NEXT_PAGES[pageFile];
+  const hasGridNext = document.querySelector('[data-grid-next-page]');
+  const isCertificatesPage = document.body.classList.contains('certificates');
+
+  if (nextTarget && !hasGridNext && !isCertificatesPage) {
+    const nextLink = document.createElement('a');
+    nextLink.className = 'site-next-page hover-up';
+    nextLink.href = nextTarget.href;
+    nextLink.setAttribute('aria-label', 'Next page: ' + nextTarget.name);
+    nextLink.innerHTML =
+      '<span class="site-next-page-inner">' +
+        '<span class="site-next-page-label">Next page</span>' +
+        '<span class="site-next-page-icon" aria-hidden="true">→</span>' +
+        '<span class="site-next-page-shine" aria-hidden="true"></span>' +
+      '</span>';
+    document.body.appendChild(nextLink);
+
+    let endShown = false;
+
+    function pageScrollProgress() {
+      const doc = document.documentElement;
+      const max = Math.max(doc.scrollHeight - window.innerHeight, 1);
+      return Math.min(1, (window.pageYOffset || doc.scrollTop) / max);
+    }
+
+    function isAtPageEnd() {
+      const doc = document.documentElement;
+      if (doc.scrollHeight <= window.innerHeight + 96) return true;
+      return pageScrollProgress() >= 0.88;
+    }
+
+    function updateNextPage() {
+      const show = isAtPageEnd();
+      nextLink.classList.toggle('is-visible', show);
+      if (show && !endShown) {
+        endShown = true;
+        nextLink.classList.remove('is-pop');
+        void nextLink.offsetWidth;
+        nextLink.classList.add('is-pop');
+      }
+      if (!show) {
+        endShown = false;
+        nextLink.classList.remove('is-pop');
+      }
+    }
+
+    window.addEventListener('scroll', updateNextPage, { passive: true });
+    window.addEventListener('resize', updateNextPage, { passive: true });
+    updateNextPage();
   }
 
 })();
