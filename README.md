@@ -1,8 +1,8 @@
 # Sankalp Portfolio
 
-Personal portfolio for **Sankalp Sahu** — Junior AI/ML Engineer, Chennai.
+Personal portfolio for **Sankalp Sahu** — Software Fresher, Chennai.
 
-Leclerc-inspired multi-page site built with pure HTML, CSS, and JavaScript (no frameworks).
+My Portfolio — multi-page site built with pure HTML, CSS, and JavaScript (no frameworks).
 
 ## Live
 

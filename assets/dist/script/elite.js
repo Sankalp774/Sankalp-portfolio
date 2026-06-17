@@ -20,12 +20,13 @@
 
   var CONTACT = {
     title: 'CONTACT',
-    desc: 'Open to Junior AI/ML roles',
+    desc: 'Open to Software Fresher roles',
     lines: [
       'Chennai, India',
       'sankalp774sahu@gmail.com',
       '+91 96917 28300',
-      'github.com/Sankalp774'
+      'github.com/Sankalp774',
+      'x.com/Sankalp0704'
     ],
     icon: '✉'
   };
@@ -41,6 +42,7 @@
     'about.html': { level: 2, zone: 'About' },
     'projects.html': { level: 3, zone: 'Projects' },
     'timeline.html': { level: 4, zone: 'Timeline' },
+    'certificates.html': { level: 5, zone: 'Certificates' },
     'blog.html': { level: 5, zone: 'Blog' },
     'contacts.html': { level: 6, zone: 'Contact' }
   };
@@ -126,15 +128,15 @@
   var page = currentPage();
   var PAGE_SUMMARIES = {
     'index.html': [
-      { id: 'brief', trigger: 'load', delay: 600, title: 'PROFILE', desc: 'Sankalp Sahu — Junior AI/ML Engineer', lines: ['Chennai · SRM IST · 14 public repos'], icon: '01' },
+      { id: 'brief', trigger: 'load', delay: 600, title: 'PROFILE', desc: 'Sankalp Sahu — Software Fresher', lines: ['Chennai · SRM IST · 14 public repos'], icon: '01' },
       { id: 'stats', sel: '.stats-grid', title: 'METRICS', desc: 'Production-ready engineering stats', lines: ['5+ projects shipped', '87% BERTScore accuracy', '1000+ concurrent transactions'], icon: '87' },
       { id: 'topproj', sel: '.featured-grid', title: 'TOP PROJECT', desc: 'RefactorAI Gen 2 — flagship build', lines: ['FastAPI + React 19 + Docker', 'Qwen 2.5-Coder via LiteLLM', 'Last push Jun 6, 2026'], icon: 'S' },
       { id: 'skills', sel: '.skills-grid', title: 'EXPERTISE', desc: 'Core technical stack', lines: ['LangChain · RAG · Mistral', 'FastAPI · PyTorch · NLP'], icon: '⬡' },
       { id: 'contact', sel: '.footer', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
     ],
     'about.html': [
-      { id: 'brief', trigger: 'load', delay: 600, title: 'ABOUT', desc: 'Final-year CSE · GenAI specialist', lines: ['Building LLM, RAG & NLP systems'], icon: '02' },
-      { id: 'education', sel: '.bio-intro', title: 'EDUCATION', desc: 'B.Tech Computer Science & Engineering', lines: ['SRM Institute of Science & Technology', 'Sept 2022 – Present · Chennai'], icon: 'ED' },
+      { id: 'brief', trigger: 'load', delay: 600, title: 'ABOUT', desc: 'B.Tech CSE \'26 · Software Fresher', lines: ['Building LLM, RAG & NLP systems'], icon: '02' },
+      { id: 'education', sel: '.bio-intro', title: 'EDUCATION', desc: 'B.Tech Computer Science & Engineering', lines: ['SRM Institute of Science & Technology', 'Sept 2022 – 2026 · Chennai'], icon: 'ED' },
       { id: 'experience', sel: '.page.about h3:nth-of-type(2)', title: 'EXPERIENCE', desc: 'App Development Intern — SkillVertex', lines: ['Jan 2024 – Mar 2024', 'Firebase Auth · Firestore · Mobile/Web'], icon: 'EX' },
       { id: 'contact', sel: '.page.about .col-span-12.lg\\:col-span-4 .text-bodyM', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
     ],
@@ -150,21 +152,27 @@
       { id: 'history', sel: '.events-grid', title: 'HISTORY', desc: '14 repos · Sep 2025 – Jun 2026', lines: ['From first commit to latest deploy'], icon: '↺' },
       { id: 'contact', sel: '.footer', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
     ],
+    'certificates.html': [
+      { id: 'brief', trigger: 'load', delay: 600, title: 'CERTIFICATES', desc: '12 credentials & event awards', lines: ['AWS · NPTEL · Google · Scaler · SRMIST'], icon: '05' },
+      { id: 'rail', sel: '[data-grid-track]', title: 'CERTIFICATES GRID', desc: '3D scroll · P1 to P12', lines: ['Scroll to drive camera down the grid'], icon: '↕' },
+      { id: 'highlight', sel: '[data-grid-pos]', title: 'POSITION', desc: 'Live grid position indicator', lines: ['Certificate · issuer · year overlay'], icon: '★' },
+      { id: 'contact', sel: '.footer', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
+    ],
     'blog.html': [
-      { id: 'brief', trigger: 'load', delay: 600, title: 'BLOG', desc: 'Notes on AI/ML & development', lines: ['Updates · tutorials · learnings'], icon: '05' },
-      { id: 'posts', sel: '.projects-grid, .blog-grid, [data-aos]', title: 'READ', desc: 'Technical writing & project logs', lines: ['React · JavaScript · AI in web dev'], icon: '¶' },
+      { id: 'brief', trigger: 'load', delay: 600, title: 'BLOG', desc: '16 stories from my timeline', lines: ['Portfolio inspiration · repos · graduation'], icon: '05' },
+      { id: 'posts', sel: '.projects-grid, .blog-grid, [data-aos]', title: 'READ', desc: 'First-person project chapters', lines: ['B.Tech · internships · GenAI · RefactorAI'], icon: '¶' },
       { id: 'contact', sel: '.footer', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
     ],
     'contacts.html': [
-      { id: 'brief', trigger: 'load', delay: 600, title: 'CONTACT', desc: 'Open to Junior AI/ML Engineer roles', lines: ['Chennai — collaborations & interviews'], icon: '06' },
-      { id: 'contact', sel: '.contacts .col-span-12.lg\\:col-span-6.lg\\:col-start-7', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines.concat(['linkedin.com/in/sankalp-sahu-738615250']), icon: CONTACT.icon },
+      { id: 'brief', trigger: 'load', delay: 600, title: 'CONTACT', desc: 'Open to Software Fresher roles', lines: ['Chennai — collaborations & interviews'], icon: '06' },
+      { id: 'contact', sel: '.contacts .col-span-12.lg\\:col-span-6.lg\\:col-start-7', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines.concat(['linkedin.com/in/sankalp-sahu-738615250', 'x.com/Sankalp0704']), icon: CONTACT.icon },
       { id: 'form', sel: '#contact-form', title: 'MESSAGE', desc: 'Send a direct inquiry', lines: ['Roles · freelance · collaborations'], icon: '→' }
     ]
   };
 
   if (page.indexOf('blog-post') === 0) {
     PAGE_SUMMARIES[page] = [
-      { id: 'brief', trigger: 'load', delay: 600, title: 'BLOG POST', desc: 'Level 5 · Article', lines: ['Technical notes & updates'], icon: '05' },
+      { id: 'brief', trigger: 'load', delay: 600, title: 'BLOG POST', desc: 'Level 5 · Timeline chapter', lines: ['Personal notes · project journey'], icon: '05' },
       { id: 'contact', sel: '.footer', title: CONTACT.title, desc: CONTACT.desc, lines: CONTACT.lines, icon: CONTACT.icon }
     ];
   }
@@ -198,14 +206,17 @@
   // 3D tilt on cards
   // ============================================
   var tiltSelectors = '.featured-card, .explore-card, .project-item, .stat-item';
+  var featuredRankIndex = 0;
   document.querySelectorAll(tiltSelectors).forEach(function(el, i) {
     el.classList.add('elite-tilt', 'elite-shine');
 
     if (el.classList.contains('featured-card')) {
       var rank = document.createElement('span');
-      rank.className = 'elite-rank elite-rank--' + (i === 0 ? 's' : i === 1 ? 'a' : 'b');
-      rank.textContent = i === 0 ? 'S-RANK' : i === 1 ? 'A-RANK' : 'B-RANK';
+      var isTop = featuredRankIndex === 0;
+      rank.className = 'elite-rank elite-rank--' + (isTop ? 's' : 'a');
+      rank.textContent = isTop ? 'S-RANK' : 'A-RANK';
       el.appendChild(rank);
+      featuredRankIndex++;
     }
 
     if (el.classList.contains('explore-card')) {
