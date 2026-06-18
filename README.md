@@ -6,7 +6,7 @@ My Portfolio — multi-page site built with pure HTML, CSS, and JavaScript (no f
 
 ## Live
 
-GitHub Pages: [sankalp774.github.io/My-Portfolio](https://sankalp774.github.io/My-Portfolio/)
+GitHub Pages: [sankalp774.github.io/Sankalp-portfolio](https://sankalp774.github.io/Sankalp-portfolio/)
 
 ## Pages
 
@@ -16,6 +16,7 @@ GitHub Pages: [sankalp774.github.io/My-Portfolio](https://sankalp774.github.io/M
 | About | `about.html` |
 | Projects | `projects.html` |
 | Timeline | `timeline.html` |
+| Certificates | `certificates.html` |
 | Blog | `blog.html` |
 | Contact | `contacts.html` |
 
