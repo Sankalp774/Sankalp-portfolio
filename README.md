@@ -1,16 +1,24 @@
-# Sankalp-portfolio (duplicate / legacy)
+# Sankalp-portfolio (legacy duplicate)
 
-This repository is a **duplicate snapshot** of the personal site.
+> **Academic stage:** **4th year** · **Created:** June 2026  
+> **Learning focus:** Site iteration / copy of portfolio assets · repo hygiene (why one canonical portfolio matters)
 
-## Canonical portfolio
+## Canonical site
 
-**Use this instead:**
+**Use instead:**
 
-- Repo: https://github.com/Sankalp774/My-Portfolio  
-- Live: https://sankalp774.github.io/My-Portfolio/
+- https://github.com/Sankalp774/My-Portfolio  
+- https://sankalp774.github.io/My-Portfolio/
 
-This copy may lag behind. Prefer starring / linking **My-Portfolio** only.
+This repo is a **legacy snapshot**. Prefer pinning and linking **My-Portfolio** only.
+
+## What I learned
+
+| Topic | How this project taught it |
+|-------|----------------------------|
+| Repo management | Duplicates create confusion on GitHub |
+| Single source of truth | One portfolio repo for hiring |
 
 ## Recommendation
 
-Archive or make this repo private after confirming My-Portfolio is up to date, so GitHub stays focused on AI/engineering work.
+Archive this repository after confirming My-Portfolio is current.
