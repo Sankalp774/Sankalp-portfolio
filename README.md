@@ -1,7 +1,7 @@
 # Sankalp-portfolio (legacy duplicate)
 
-> **Academic stage:** **4th year** · **Created:** June 2026  
-> **Learning focus:** Site iteration / copy of portfolio assets · repo hygiene (why one canonical portfolio matters)
+> **Created:** (2026-06-17)  
+> **Latest update:** (2026-07-22) — Legacy duplicate notice · point to canonical My-Portfolio
 
 ## Canonical site
 
