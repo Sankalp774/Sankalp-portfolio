@@ -1,46 +1,16 @@
-# Sankalp Portfolio
+# Sankalp-portfolio (duplicate / legacy)
 
-Personal portfolio for **Sankalp Sahu** — Software Fresher, Chennai.
+This repository is a **duplicate snapshot** of the personal site.
 
-My Portfolio — multi-page site built with pure HTML, CSS, and JavaScript (no frameworks).
+## Canonical portfolio
 
-## Live
+**Use this instead:**
 
-GitHub Pages: [sankalp774.github.io/Sankalp-portfolio](https://sankalp774.github.io/Sankalp-portfolio/)
+- Repo: https://github.com/Sankalp774/My-Portfolio  
+- Live: https://sankalp774.github.io/My-Portfolio/
 
-## Pages
+This copy may lag behind. Prefer starring / linking **My-Portfolio** only.
 
-| Page | File |
-|------|------|
-| Home | `index.html` |
-| About | `about.html` |
-| Projects | `projects.html` |
-| Timeline | `timeline.html` |
-| Certificates | `certificates.html` |
-| Blog | `blog.html` |
-| Contact | `contacts.html` |
+## Recommendation
 
-## Stack
-
-- HTML, CSS, vanilla JS
-- Three.js (removed from home — cinematic static build)
-- Elite interactions (`assets/dist/script/elite.js`)
-- Syne + Manrope fonts (Google Fonts)
-
-## Run locally
-
-```bash
-python3 -m http.server 8000
-```
-
-Open [http://localhost:8000](http://localhost:8000)
-
-## Deploy
-
-Push to `main` — GitHub Pages serves from this repo root.
-
-## Contact
-
-- GitHub: [Sankalp774](https://github.com/Sankalp774)
-- LinkedIn: [sankalp-sahu-738615250](https://www.linkedin.com/in/sankalp-sahu-738615250/)
-- Email: sankalp774sahu@gmail.com
+Archive or make this repo private after confirming My-Portfolio is up to date, so GitHub stays focused on AI/engineering work.
